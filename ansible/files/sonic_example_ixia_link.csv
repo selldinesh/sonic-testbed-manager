@@ -1,0 +1,11 @@
+StartDevice,StartPort,EndDevice,EndPort,BandWidth,VlanID,VlanMode
+example-s6100-dut-1,Ethernet0,example-ixia-1,Card1/Port1,40000,300,Access
+example-s6100-dut-1,Ethernet1,example-ixia-1,Card1/Port2,40000,301,Access
+example-s6100-dut-1,Ethernet2,example-ixia-1,Card1/Port3,40000,302,Access
+example-s6100-dut-2,Ethernet0,example-ixia-2,Card9/Port1,100000,300,Access
+example-s6100-dut-2,Ethernet4,example-ixia-2,Card9/Port2,100000,301,Access
+example-s6100-dut-2,Ethernet8,example-ixia-2,Card9/Port3,100000,302,Access
+example-s6100-dut-2,Ethernet12,example-ixia-2,Card9/Port4,100000,300,Access
+example-s6100-dut-2,Ethernet16,example-ixia-2,Card9/Port5,100000,301,Access
+example-s6100-dut-2,Ethernet20,example-ixia-2,Card9/Port6,100000,302,Access
+
