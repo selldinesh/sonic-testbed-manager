@@ -1,0 +1,30 @@
+<LabConnectionGraph>
+  <PhysicalNetworkGraphDeclaration>
+    <Devices>
+      <Device Hostname="ixia-sonic" HwSku="IXIA-tester" Type="DevIxiaChassis"/>
+      <Device Hostname="sonic-s6100-dut" HwSku="Arista-7060CX-32S-C32" Type="DevSonic"/>
+      <Device Hostname="ixia-sonic-api-serv" HwSku="IXIA-tester" Type="DevIxiaApiServ"/>
+    </Devices>
+    <DeviceInterfaceLinks>
+      <DeviceInterfaceLink BandWidth="100000" EndDevice="ixia-sonic" EndPort="Card9/Port1" StartDevice="sonic-s6100-dut" StartPort="Ethernet0"/>
+      <DeviceInterfaceLink BandWidth="100000" EndDevice="ixia-sonic" EndPort="Card9/Port2" StartDevice="sonic-s6100-dut" StartPort="Ethernet4"/>
+      <DeviceInterfaceLink BandWidth="100000" EndDevice="ixia-sonic" EndPort="Card9/Port3" StartDevice="sonic-s6100-dut" StartPort="Ethernet8"/>
+      <DeviceInterfaceLink BandWidth="100000" EndDevice="ixia-sonic" EndPort="Card9/Port4" StartDevice="sonic-s6100-dut" StartPort="Ethernet12"/>
+      <DeviceInterfaceLink BandWidth="100000" EndDevice="ixia-sonic" EndPort="Card9/Port5" StartDevice="sonic-s6100-dut" StartPort="Ethernet16"/>
+      <DeviceInterfaceLink BandWidth="100000" EndDevice="ixia-sonic" EndPort="Card9/Port6" StartDevice="sonic-s6100-dut" StartPort="Ethernet20"/>
+    </DeviceInterfaceLinks>
+  </PhysicalNetworkGraphDeclaration>
+  <DataPlaneGraph>
+    <DevicesL3Info Hostname="ixia-sonic">
+      <ManagementIPInterface Name="ManagementIp" Prefix="10.36.78.53/32"/>
+    </DevicesL3Info>
+    <DevicesL2Info Hostname="ixia-sonic">
+      <InterfaceVlan mode="Access" portname="Card9/Port1" vlanids="300"/>
+      <InterfaceVlan mode="Access" portname="Card9/Port2" vlanids="301"/>
+      <InterfaceVlan mode="Access" portname="Card9/Port3" vlanids="302"/>
+      <InterfaceVlan mode="Access" portname="Card9/Port4" vlanids="300"/>
+      <InterfaceVlan mode="Access" portname="Card9/Port5" vlanids="301"/>
+      <InterfaceVlan mode="Access" portname="Card9/Port6" vlanids="302"/>
+    </DevicesL2Info>
+  </DataPlaneGraph>
+</LabConnectionGraph>
