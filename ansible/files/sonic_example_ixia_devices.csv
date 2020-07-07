@@ -1,8 +1,0 @@
-Hostname,ManagementIp,HwSku,Type
-example-ixia-1,10.36.78.53/32,IXIA-tester,DevIxiaChassis
-example-s6100-dut-1,10.36.78.143/32,Dell-S6100,DevSonic
-example-ixia-api-serv-1,10.39.33.143,IXIA-tester,DevIxiaApiServ
-example-ixia-2,10.36.78.53/32,IXIA-tester,DevIxiaChassis
-example-s6100-dut-2,10.36.79.155/32,Arista-7060CX-32S-C32,DevSonic
-example-ixia-api-serv-2,10.36.77.57,IXIA-tester,DevIxiaApiServ
-
