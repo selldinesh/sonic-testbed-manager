@@ -8,14 +8,14 @@
 * Give the engineer a script to build the testbed from the stored files in the repository.
 # Workflow
 * Sync the sonic-mgmt in the local directory
-  git clone https://github.com/abhijit-dhar/sonic-mgmt
+  * git clone https://github.com/abhijit-dhar/sonic-mgmt
 * load the docker image such that it sonic-mgmt inside the container
-  sudo docker run -it --name sonic --privileged -v /home/ubuntu/sonic-mgmt/:/var/johnar/sonic-mgmt  --user johnar:gjohnar docker-sonic-mgmt
+  * sudo docker run -it --name sonic --privileged -v /home/ubuntu/sonic-mgmt/:/var/johnar/sonic-mgmt  --user johnar:gjohnar docker-sonic-mgmt
 * Inside the container clone sonic-testbed-manager
-  git clone https://github.com/abhijit-dhar/sonic-testbed-manager
+  * git clone https://github.com/abhijit-dhar/sonic-testbed-manager
 * run the script dev-env.sh form the directory /var/johnar/sonic-testbed-manager/ixia-calbases-lab
-  cd /var/johnar/sonic-testbed-manager/ixia-calbases-lab
-  sh ./dev-env.sh
+  * cd /var/johnar/sonic-testbed-manager/ixia-calbases-lab
+  * sh ./dev-env.sh
 
 
 
