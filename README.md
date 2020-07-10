@@ -4,7 +4,7 @@
 * User scripts runs inside the docker container loads and access these files, and if the container is corrupted or crashed these files will be lost and will be difficult to get back easily. This will be challenging time for the user who doesn’t have the knowledge of interrelationship of the files.
 # So how do we onboard engineer to write tests?
 * Keep the testbed files in the separate repository outside the SONiC docker image.
-* Provision the engineers to keep the code in their local machine and mount them in the while loading the docker container. So, code will be in the local directory and won’t get lost if the container is wrecked.
+* Provision the engineers to keep the code in their local machine and mount them while loading the docker container. So, code will be in the local directory and won’t get lost if the container is wrecked.
 * Give the engineer a script to build the testbed from the stored files in the repository.
 # Workflow
 * Sync the sonic-mgmt in the local directory.
