@@ -6,7 +6,8 @@
 * Keep the testbed files in the separate repository outside the SONiC docker image.
 * Provision the engineers to keep the code in their local machine and mount them while loading the docker container. So, code will be in the local directory and won’t get lost if the container is wrecked.
 * Give the engineer a script to build the testbed from the stored files in the repository.
-# Workflow
+# Workflows
+### workflow1
 * Sync the sonic-mgmt in the local directory.
   * git clone https://github.com/abhijit-dhar/sonic-mgmt
 * load the docker image such that it mounts sonic-mgmt inside the container.
@@ -19,7 +20,17 @@
 * Run the test
   * cd ~/sonic-mgmt/tests/
   * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --module-path ../ansible/library/ --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level  info  --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/test_ixia_traffic_restpy.py
-
-
-
-
+### workflow2
+* Simply load the docker image no mounts of local folders are required.
+  * sudo docker run -it --name sonic docker-sonic-mgmt
+* Inside the container clone the sonic-mgmt.
+  * git clone https://github.com/abhijit-dhar/sonic-mgmt
+* Inside the container clone sonic-testbed-manager.
+  * git clone https://github.com/abhijit-dhar/sonic-testbed-manager
+* Run the script dev-env.sh form the directory /var/johnar/sonic-testbed-manager/ixia-calbases-lab
+  * cd /var/johnar/sonic-testbed-manager/ixia-calbases-lab
+  * sh ./dev-env.sh
+* Run the test
+  * cd ~/sonic-mgmt/tests/
+  * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --module-path ../ansible/library/ --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level  info  --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/test_ixia_traffic_restpy.py
+* In this workflow if you make certain local change inside the folder ~/sonic-mgmt/ that will not be saved if the container got corrupted somehow.
