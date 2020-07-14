@@ -20,6 +20,7 @@
 * Run the test
   * cd ~/sonic-mgmt/tests/
   * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --module-path ../ansible/library/ --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level  info  --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/test_ixia_traffic_restpy.py
+ * In this workflow your test script or code will remain intact even if docker image is destroyed unintentionally since you are actually keeping the code in the (mounted) local directory.
 ### workflow2
 * Simply load the docker image no mounts of local folders are required.
   * sudo docker run -it --name sonic docker-sonic-mgmt
