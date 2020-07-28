@@ -6,15 +6,11 @@
 * Docker-tools should be there installed in your system.
 # sonic-mgmt docker environment preparation: useful commands (for Ubuntu system)
 #### Installing docker
-``sudo apt-get update``
-
-``sudo apt-get remove docker docker-engine docker.io``
-
-``sudo apt install docker.io``
-
-``sudo systemctl start docker``
-
-``sudo systemctl enable docker``
+``sudo apt-get update``<br>
+``sudo apt-get remove docker docker-engine docker.io``<br>
+``sudo apt install docker.io``<br>
+``sudo systemctl start docker``<br>
+``sudo systemctl enable docker``<br>
 #### Unzip sonic Image
 ``gzip -d docker-sonic-mgmt.gz``
 #### Load the docker Image
