@@ -1,3 +1,8 @@
+# Prerequsits 
+* An Ubuntu linux box
+* download the sonic docker image and save it in your home directory. 
+* Pre-built sonic-mgmt can also be downloaded from [here](https://sonic-jenkins.westus2.cloudapp.azure.com/job/bldenv/job/docker-sonic-mgmt/lastSuccessfulBuild/artifact/sonic-buildimage/target/docker-sonic-mgmt.gz)
+
 # SONiC testbed management infrastructure
 * The SONiC testbed consists of multiple interrelated configuration files that are difficult and error-prone edit manually.
 * They are not frequently modified and only handful of persons like owners/admin has authority to modify them. But creating the initial setup or retrieving a broken setup is more challenging task for them.
