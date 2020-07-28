@@ -3,7 +3,7 @@
 * download the sonic docker image and save it in your home directory. 
 * Pre-built sonic-mgmt can also be downloaded from [here](https://sonic-jenkins.westus2.cloudapp.azure.com/job/bldenv/job/docker-sonic-mgmt/lastSuccessfulBuild/artifact/sonic-buildimage/target/docker-sonic-mgmt.gz)
 
-# sonic-mgmt docker environment preparation: usefull commands
+# sonic-mgmt docker environment preparation: useful commands
 ### Installing docker
 sudo apt-get update
 sudo apt-get remove docker docker-engine docker.io
