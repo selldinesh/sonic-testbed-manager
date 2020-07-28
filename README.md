@@ -9,6 +9,7 @@
 
 # Workflows
 ### workflow1
+Before going to the work flows please look into the [basic docker commands to create the sonic-mgmt environment](DockerCommands.md).
 * Sync the sonic-mgmt in the local directory.
   * git clone https://github.com/abhijit-dhar/sonic-mgmt
 * load the docker image such that it mounts sonic-mgmt inside the container.
