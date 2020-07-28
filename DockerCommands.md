@@ -4,25 +4,26 @@
   * Pre-built sonic-mgmt can also be downloaded from [here](https://sonic-jenkins.westus2.cloudapp.azure.com/job/bldenv/job/docker-sonic-mgmt/lastSuccessfulBuild/artifact/sonic-buildimage/target/docker-sonic-mgmt.gz)
 * Basic knowledge of docker commands.
 * Docker-tools should be there installed in your system.
-
 # sonic-mgmt docker environment preparation: useful commands (for Ubuntu system)
 #### Installing docker
-``sudo apt-get update
+``sudo apt-get update``
 
-sudo apt-get remove docker docker-engine docker.io
+``sudo apt-get remove docker docker-engine docker.io``
 
-sudo apt install docker.io
+``sudo apt install docker.io``
 
-sudo systemctl start docker
+``sudo systemctl start docker``
 
-sudo systemctl enable docker``
-
+``sudo systemctl enable docker``
 #### Unzip sonic Image
 ``gzip -d docker-sonic-mgmt.gz``
 #### Load the docker Image
 ``sudo docker images``
+
 ``sudo docker load -i docker-sonic-mgmt``
+
 ``sudo docker run -it --name sonic docker-sonic-mgmt``
+
 #### Stopping a docer session
 ``sudo docker stop sonic``
 #### Reconnect to a stopped docer session
