@@ -5,26 +5,26 @@
 * Basic knowledge of docker commands.
 * Docker-tools should be there installed in your system.
 # sonic-mgmt docker environment preparation: useful commands (for Ubuntu system)
-##### Installing docker
+**Installing docker**
 ``sudo apt-get update``<br>
 ``sudo apt-get remove docker docker-engine docker.io``<br>
 ``sudo apt install docker.io``<br>
 ``sudo systemctl start docker``<br>
 ``sudo systemctl enable docker``<br>
-##### Unzip sonic Image
+**Unzip sonic Image**
 ``gzip -d docker-sonic-mgmt.gz``
-##### Load the docker Image
+**Load the docker Image**
 ``sudo docker images``<br>
 ``sudo docker load -i docker-sonic-mgmt``<br>
 ``sudo docker run -it --name sonic docker-sonic-mgmt``<br>
-##### Stopping a docer session
+**Stopping a docer session**
 ``sudo docker stop sonic``
-##### Reconnect to a stopped docer session
+**Reconnect to a stopped docer session**
 ``sudo docker start -i sonic``
-##### When you are done you may remove the image sonic
+**When you are done you may remove the image sonic**
 ``sudo docker rm sonic``
-##### Remove docker by image Id
+**Remove docker by image Id**
 ``sudo docker rmi -f <image-id>``
-##### Running a sonic docker with local directoy mounted in it.
+**Running a sonic docker with local directoy mounted in it.**
 ``sudo docker run -it --name sonic --privileged -v /home/ubuntu/adhar/:/var/johnar/adhar --workdir /var/johnar/adhar --user johnar:gjohnar docker-sonic-mgmt``
 
