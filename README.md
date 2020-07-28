@@ -7,37 +7,6 @@
 * Provision the engineers to keep the code in their local machine and mount them while loading the docker container. So, code will be in the local directory and won’t get lost if the container is wrecked.
 * Give the engineer a script to build the testbed from the stored files in the repository.
 
-# Prerequisites 
-* An Ubuntu Linux box
-* download the sonic docker image and save it in your home directory. 
-* Pre-built sonic-mgmt can also be downloaded from [here](https://sonic-jenkins.westus2.cloudapp.azure.com/job/bldenv/job/docker-sonic-mgmt/lastSuccessfulBuild/artifact/sonic-buildimage/target/docker-sonic-mgmt.gz)
-* Basic knowledge of docker commands
-* Docker-tools should be there installed in your system.
-
-# sonic-mgmt docker environment preparation: useful commands (for ubuntu system)
-##### Installing docker
-* sudo apt-get update
-* sudo apt-get remove docker docker-engine docker.io
-* sudo apt install docker.io
-* sudo systemctl start docker
-* sudo systemctl enable docker
-##### Unzip sonic Image
-* gzip -d docker-sonic-mgmt.gz
-##### Load the docker Image
-* sudo docker images
-* sudo docker load -i docker-sonic-mgmt
-* sudo docker run -it --name sonic docker-sonic-mgmt
-##### stopping a docer session
-* sudo docker stop sonic
-##### reconnect to a stopped docer session
-* sudo docker start -i sonic
-##### When you are done you may remove the image sonic
-* sudo docker rm sonic
-##### remove docker by image Id
-* sudo docker rmi -f <image-id>
-### Running a sonic docker with local directoy mounted in it.
-* sudo docker run -it --name sonic --privileged -v /home/ubuntu/adhar/:/var/johnar/adhar --workdir /var/johnar/adhar --user johnar:gjohnar docker-sonic-mgmt
-
 # Workflows
 ### workflow1
 * Sync the sonic-mgmt in the local directory.
