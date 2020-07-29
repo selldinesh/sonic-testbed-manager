@@ -9,6 +9,8 @@
 
 # Workflows
 Before going to the work flows please look into the [basic docker commands to create the sonic-mgmt environment](DockerCommands.md).
+Also before getting invloved into any of the workflow1 or workflow2 please make sure that you have loaded the sonic docker image to be executed using locker load command. 
+```sudo docker load -i docker-sonic-mgmt``` 
 ### workflow1
 * Sync the sonic-mgmt in the local directory.
   * git clone https://github.com/abhijit-dhar/sonic-mgmt
@@ -35,5 +37,5 @@ Before going to the work flows please look into the [basic docker commands to cr
   * sh ./dev-env.sh
 * Run the test
   * cd ~/sonic-mgmt/tests/
-  * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --module-path ../ansible/library/ --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level  info  --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/test_ixia_traffic_restpy.py
+  * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --module-path ../ansible/library/ --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level  info  --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/test_ixia_traffic.py
 * In this workflow if you make certain local change inside the folder ~/sonic-mgmt/ that will not be saved if the container got corrupted somehow.
