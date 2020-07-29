@@ -9,7 +9,8 @@
 
 # Workflows
 Before going to the work flows please look into the [basic docker commands to create the sonic-mgmt environment](DockerCommands.md).
-Also before getting invloved into any of the workflow1 or workflow2 please make sure that loaded the sonic docker image to be executed using locker load command. ```sudo docker load -i docker-sonic-mgmt``` (ref: [basic docker commands to create the sonic-mgmt environment](DockerCommands.md)). 
+Also before getting invloved into any of the workflow1 or workflow2 please make sure that loaded the sonic docker image to be executed using locker load command.<br> 
+```sudo docker load -i docker-sonic-mgmt``` 
 ### workflow1
 * Sync the sonic-mgmt in the local directory.
   * git clone https://github.com/abhijit-dhar/sonic-mgmt
