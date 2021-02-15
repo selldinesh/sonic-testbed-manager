@@ -16,7 +16,7 @@ Also before getting invloved into any of the workflow1 or workflow2 please make 
   * git clone https://github.com/abhijit-dhar/sonic-mgmt
 * load the docker image such that it mounts sonic-mgmt inside the container.
   * sudo docker run -it --name sonic --privileged -v /home/ubuntu/sonic-mgmt/:/var/johnar/sonic-mgmt  --user johnar:gjohnar docker-sonic-mgmt
-  Make sure the path is matching the criteria
+  * Make sure the path is matching the criteria
 * Inside the container clone sonic-testbed-manager.
   * git clone https://github.com/abhijit-dhar/sonic-testbed-manager
 * Run the script dev-env.sh form the directory /var/johnar/sonic-testbed-manager/ixia-calbases-lab
