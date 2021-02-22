@@ -13,18 +13,21 @@ Also before getting invloved into any of the workflow1 or workflow2 please make 
 ```sudo docker load -i docker-sonic-mgmt``` 
 ### workflow1
 * Sync the sonic-mgmt in the local directory.
-  * git clone https://github.com/abhijit-dhar/sonic-mgmt
+  * git clone --branch bgp_tests https://github.com/ANISH-GOTTAPU/sonic-mgmt
 * load the docker image such that it mounts sonic-mgmt inside the container.
   * sudo docker run -it --name sonic --privileged -v /home/ubuntu/sonic-mgmt/:/var/johnar/sonic-mgmt  --user johnar:gjohnar docker-sonic-mgmt
   * Make sure the path is matching the criteria
 * Inside the container clone sonic-testbed-manager.
-  * git clone https://github.com/abhijit-dhar/sonic-testbed-manager
+  * https://github.com/ANISH-GOTTAPU/sonic-testbed-manager
 * Run the script dev-env.sh form the directory /var/johnar/sonic-testbed-manager/ixia-calbases-lab
   * cd /var/johnar/sonic-testbed-manager/ixia-calbases-lab
   * sh ./dev-env.sh
 * Run the test
   * cd ~/sonic-mgmt/tests/
-  * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --module-path ../ansible/library/ --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level  info  --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/test_ixia_traffic_restpy.py
+  * Add environment variables
+    * export ANSIBLE_CONFIG=../ansible
+    * export ANSIBLE_LIBRARY=../ansible
+  * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level info --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/bgp/test_bgp_community.py
  * In this workflow your test script or code will remain intact even if docker image is destroyed unintentionally since you are actually keeping the code in the (mounted) local directory.
 ### workflow2
 * Simply load the docker image no mounts of local folders are required.
