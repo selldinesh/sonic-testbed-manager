@@ -12,13 +12,17 @@ Before going to the work flows please look into the [basic docker commands to cr
 Also before getting invloved into any of the workflow1 or workflow2 please make sure that you have loaded the sonic docker image to be executed using locker load command. 
 ```sudo docker load -i docker-sonic-mgmt``` 
 ### workflow1
-* Sync the sonic-mgmt in the local directory.
-  * git clone --branch bgp_tests https://github.com/ANISH-GOTTAPU/sonic-mgmt
+* Fork the sonic-mgmt(https://github.com/Azure/sonic-mgmt.git) repo.
+  * <i>Make sure you clone the forked version from your repo</i>
+      - Ex: git clone https://github.com/ANISH-GOTTAPU/sonic-mgmt
 * load the docker image such that it mounts sonic-mgmt inside the container.
+    * <i> Make sure the path is matching the criteria</i>
   * sudo docker run -it --name sonic --privileged -v /home/ubuntu/sonic-mgmt/:/var/johnar/sonic-mgmt  --user johnar:gjohnar docker-sonic-mgmt
-  * Make sure the path is matching the criteria
 * Inside the container clone sonic-testbed-manager.
-  * git clone https://github.com/ANISH-GOTTAPU/sonic-testbed-manager
+  * Fork the sonic-testbed-manager(https://github.com/ANISH-GOTTAPU/sonic-testbed-manager) 
+  * update the files accordingly in your forked repo as per testbed
+  * Now do a git clone of updated forked repo inside the container
+      - Ex:- git clone https://github.com/ANISH-GOTTAPU/sonic-testbed-manager
 * Run the script dev-env.sh form the directory /var/johnar/sonic-testbed-manager/ixia-calbases-lab
   * cd /var/johnar/sonic-testbed-manager/ixia-calbases-lab
   * sh ./dev-env.sh
@@ -32,14 +36,20 @@ Also before getting invloved into any of the workflow1 or workflow2 please make 
 ### workflow2
 * Simply load the docker image no mounts of local folders are required.
   * sudo docker run -it --name sonic docker-sonic-mgmt
-* Inside the container clone the sonic-mgmt.
-  * git clone https://github.com/abhijit-dhar/sonic-mgmt
+* Inside the container clone the forked version of sonic-mgmt(https://github.com/Azure/sonic-mgmt.git)
+    - Ex: git clone https://github.com/ANISH-GOTTAPU/sonic-mgmt
 * Inside the container clone sonic-testbed-manager.
-  * git clone https://github.com/abhijit-dhar/sonic-testbed-manager
+  * Fork the sonic-testbed-manager(https://github.com/ANISH-GOTTAPU/sonic-testbed-manager) 
+  * update the files accordingly in your forked repo as per the testbed.
+  * Now do a git clone of updated forked repo inside the container
+      - Ex:- git clone https://github.com/ANISH-GOTTAPU/sonic-testbed-manager
 * Run the script dev-env.sh form the directory /var/johnar/sonic-testbed-manager/ixia-calbases-lab
   * cd /var/johnar/sonic-testbed-manager/ixia-calbases-lab
   * sh ./dev-env.sh
 * Run the test
   * cd ~/sonic-mgmt/tests/
-  * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --module-path ../ansible/library/ --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level  info  --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/test_ixia_traffic.py
+  * Add environment variables
+    * export ANSIBLE_CONFIG=../ansible
+    * export ANSIBLE_LIBRARY=../ansible
+  * py.test --inventory ../ansible/ixia-sonic --host-pattern sonic-s6100-dut --testbed vms-ixia-sonic --testbed_file ../ansible/testbed.csv --show-capture=stdout --log-cli-level info --showlocals -ra --allow_recover --skip_sanity --disable_loganalyzer ixia/bgp/test_bgp_community.py
 * In this workflow if you make certain local change inside the folder ~/sonic-mgmt/ that will not be saved if the container got corrupted somehow.
