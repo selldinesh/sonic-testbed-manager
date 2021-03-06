@@ -28,3 +28,29 @@
 **Running a sonic docker with local directoy mounted in it.**<br>
 ``sudo docker run -it --name sonic --privileged -v /home/ubuntu/adhar/:/var/johnar/adhar --workdir /var/johnar/adhar --user johnar:gjohnar docker-sonic-mgmt``<br><br>
 
+
+# How to run a docker with a port number
+**Run a docker container with port number -p**<br>
+* -itd will run docker in a detached state, I'm using port 2222 you can use any port<br>
+``sudo docker run -itd --name sonic -p 2222:22 docker-sonic-mgmt``<br><br>
+
+**Enter the docker container using exec**<br>
+``sudo docker exec -it sonic bash``<br><br>
+
+**Check ssh service is running inside the docker**<br>
+``johnar@1ed3a9afe70f:~$ service --status-all``<br><br>
+
+**If ssh service is not running start ssh**<br>
+``johnar@1ed3a9afe70f:~$ sudo service ssh start``<br><br>
+
+**update johnar user passwd**<br>
+* update passwd of your choice
+``johnar@1ed3a9afe70f:~$ sudo passwd johnar``<br><br>
+
+**use ssh from any machine in the network to login to docker directly**<br>
+``ssh johnar@10.39.71.246 -p 2222``
+
+
+
+
+

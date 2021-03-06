@@ -6,8 +6,8 @@
       <Device Hostname="ixia-sonic-api-serv" HwSku="IXIA-tester" Type="DevIxiaApiServ"/>
     </Devices>
     <DeviceInterfaceLinks>
-      <DeviceInterfaceLink BandWidth="400000" EndDevice="ixia-sonic" EndPort="Card1/Port1" StartDevice="sonic-s6100-dut" StartPort="Ethernet8"/>
-      <DeviceInterfaceLink BandWidth="400000" EndDevice="ixia-sonic" EndPort="Card1/Port2" StartDevice="sonic-s6100-dut" StartPort="Ethernet0"/>
+      <DeviceInterfaceLink BandWidth="400000" EndDevice="ixia-sonic" EndPort="Card1/Port1" StartDevice="sonic-s6100-dut" StartPort="Ethernet0"/>
+      <DeviceInterfaceLink BandWidth="400000" EndDevice="ixia-sonic" EndPort="Card1/Port2" StartDevice="sonic-s6100-dut" StartPort="Ethernet8"/>
     </DeviceInterfaceLinks>
   </PhysicalNetworkGraphDeclaration>
   <DataPlaneGraph>
