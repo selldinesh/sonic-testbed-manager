@@ -1,7 +1,7 @@
 SCRIPT_DIR=`pwd`
 DATE_TIME=`date | sed 's/ //g' | sed 's/://g'`
 sudo chown -R johnar:gjohnar ~/sonic-mgmt
-cp -rf ~/sonic-mgmt  ~/sonic-mgmt-bkp-$DATE_TIME
+#cp -rf ~/sonic-mgmt  ~/sonic-mgmt-bkp-$DATE_TIME
 sudo rm -f  ~/sonic-mgmt/ansible/group_vars/all/inv_mapping.yml
 sudo rm -f  ~/sonic-mgmt/ansible/group_vars/all/inv_mapping.json
 sudo rm -f  ~/sonic-mgmt/ansible/group_vars/lab/lab.yml
