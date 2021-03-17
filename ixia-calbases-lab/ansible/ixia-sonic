@@ -19,4 +19,4 @@ sonic
 ixia_chassis
 
 [ptf]
-ixia-sonic-ptf     ansible_host='10.36.79.99'
+ixia-sonic-ptf     ansible_host='10.36.78.96'
