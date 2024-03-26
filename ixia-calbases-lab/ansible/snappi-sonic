@@ -1,5 +1,5 @@
 [sonic_dell64_40]
-sonic-s6100-dut     ansible_host=10.36.79.243
+sonic-s6100-dut     ansible_host=10.36.78.144
 
 [sonic_dell64_40:vars]
 hwsku="Force10-S6100"
@@ -19,4 +19,4 @@ sonic
 snappi_chassis
 
 [ptf]
-snappi-sonic-ptf     ansible_host='10.36.78.91'
+snappi-sonic-ptf     ansible_host='10.36.78.135'
