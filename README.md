@@ -14,7 +14,7 @@ Also before getting invloved into any of the workflow1 or workflow2 please make 
 ### workflow1
 * Fork the sonic-mgmt(https://github.com/Azure/sonic-mgmt.git) repo.
   * <i>Make sure you clone the forked version from your repo</i>
-      - Ex: git clone https://github.com/selldinesh/sonic-testbed-manager.git
+      - Ex: git clone https://github.com/selldinesh/sonic-mgmt.git
 * load the docker image such that it mounts sonic-mgmt inside the container.
     * <i> Make sure the path is matching the criteria</i>
   * sudo docker run -it --name sonic --privileged -v /home/ubuntu/sonic-mgmt/:/var/johnar/sonic-mgmt  --user johnar:gjohnar docker-sonic-mgmt
@@ -37,7 +37,7 @@ Also before getting invloved into any of the workflow1 or workflow2 please make 
 * Simply load the docker image no mounts of local folders are required.
   * sudo docker run -it --name sonic docker-sonic-mgmt
 * Inside the container clone the forked version of sonic-mgmt(https://github.com/Azure/sonic-mgmt.git)
-    - Ex: git clone https://github.com/selldinesh/sonic-testbed-manager.git
+    - Ex: git clone https://github.com/selldinesh/sonic-mgmt.git
 * Inside the container clone sonic-testbed-manager.
   * Fork the sonic-testbed-manager(https://github.com/selldinesh/sonic-testbed-manager.git) 
   * update the files accordingly in your forked repo as per the testbed.
