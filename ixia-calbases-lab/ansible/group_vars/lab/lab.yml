@@ -48,6 +48,5 @@ bgp_slb_passive_range: 10.255.0.0/25
 fanout_admin_user: "fanoutadminuser"
 fanout_admin_password: "fanoutadminpassword"
 
-#For ixia specific entry
-#secret_group_vars: {ixia_api_server: {user: 8011, password: remote, rest_port: 11074, session_id: 1}}
-secret_group_vars: {ixia_api_server: {user: admin, password: admin, rest_port: 443, session_id: "None"}}
+#For snappi specific entry
+secret_group_vars: {snappi_api_server: {user: admin, password: admin, rest_port: 443, session_id: "None"}}

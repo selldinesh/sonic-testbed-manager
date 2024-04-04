@@ -1,5 +1,0 @@
-Hostname,ManagementIp,HwSku,Type
-ixia-sonic,10.36.78.238/32,IXIA-tester,DevIxiaChassis
-sonic-s6100-dut,10.36.79.30/32,Arista-7060CX-32S-C32,DevSonic
-ixia-sonic-api-serv,10.36.78.96/32,IXIA-tester,DevIxiaApiServ
-
