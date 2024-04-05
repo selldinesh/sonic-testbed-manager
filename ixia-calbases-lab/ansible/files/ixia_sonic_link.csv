@@ -1,4 +1,0 @@
-StartDevice,StartPort,EndDevice,EndPort,BandWidth,VlanID,VlanMode
-sonic-s6100-dut,Ethernet0,ixia-sonic,Card1/Port1,400000,,Access
-sonic-s6100-dut,Ethernet8,ixia-sonic,Card1/Port2,400000,,Access
-
