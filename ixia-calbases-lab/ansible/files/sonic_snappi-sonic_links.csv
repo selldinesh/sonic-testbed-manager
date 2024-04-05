@@ -1,5 +1,0 @@
-StartDevice,StartPort,EndDevice,EndPort,BandWidth,VlanID,VlanMode
-sonic-s6100-dut,Ethernet0,snappi-sonic,Card1/Port1,100000,2,Access
-sonic-s6100-dut,Ethernet4,snappi-sonic,Card1/Port2,100000,2,Access
-sonic-s6100-dut,Ethernet8,snappi-sonic,Card1/Port3,100000,2,Access
-sonic-s6100-dut,Ethernet12,snappi-sonic,Car1/Port4,100000,2,Access
