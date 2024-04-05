@@ -7,4 +7,3 @@ sonic-s6100-dut2,Ethernet0,snappi-sonic,Card1/Port5,100000,2,Access
 sonic-s6100-dut2,Ethernet8,snappi-sonic,Card1/Port6,100000,2,Access
 sonic-s6100-dut2,Ethernet16,snappi-sonic,Card1/Port7,100000,2,Access
 sonic-s6100-dut2,Ethernet24,snappi-sonic,Card1/Port8,100000,2,Access
-sonic-s6100-dut1,Ethernet248,sonic-s6100-dut2,Ethernet248,100000,2,Access

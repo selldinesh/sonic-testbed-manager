@@ -1,5 +1,7 @@
 [sonic_dell64_40]
-sonic-s6100-dut     ansible_host=10.36.78.101
+sonic-s6100-dut1     ansible_host=10.36.77.145
+sonic-s6100-dut2     ansible_host=10.36.78.115
+
 
 [sonic_dell64_40:vars]
 hwsku="Force10-S6100"
