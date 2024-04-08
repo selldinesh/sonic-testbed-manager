@@ -1,0 +1,74 @@
+{
+    "vms-snappi-sonic": {
+        "sonic-s6100-dut1": {
+            "intf_status": {
+                "Ethernet0": {
+                    "name": "Ethernet0",
+                    "speed": "400G",
+                    "fec": "rs",
+                    "alias": "fourHundredGigE1",
+                    "vlan": "routed",
+                    "oper_state": "up",
+                    "admin_state": "up",
+                    "type": "QSFP28 or later"
+                },
+                "Ethernet8": {
+                    "name": "Ethernet8",
+                    "speed": "400G",
+                    "fec": "rs",
+                    "alias": "fourHundredGigE2",
+                    "vlan": "routed",
+                    "oper_state": "up",
+                    "admin_state": "up",
+                    "type": "QSFP28 or later"
+                },
+                "Ethernet12": {
+                    "name": "Ethernet12",
+                    "speed": "400G",
+                    "fec": "rs",
+                    "alias": "fourHundredGigE3",
+                    "vlan": "routed",
+                    "oper_state": "up",
+                    "admin_state": "up",
+                    "type": "QSFP28 or later"
+                },
+                "Ethernet24": {
+                    "name": "Ethernet24",
+                    "speed": "400G",
+                    "fec": "rs",
+                    "alias": "fourHundredGigE4",
+                    "vlan": "routed",
+                    "oper_state": "up",
+                    "admin_state": "up",
+                    "type": "QSFP28 or later"
+                }
+            },
+            "features": {
+                "bgp": "enabled",
+                "database": "always_enabled",
+                "dhcp_relay": "enabled",
+                "dhcp_snoop": "disabled",
+                "dot1x": "enabled",
+                "iccpd": "enabled",
+                "lldp": "enabled",
+                "macsec": "disabled",
+                "mcast": "enabled",
+                "mgmt-framework": "enabled",
+                "mux": "always_disabled",
+                "nat": "enabled",
+                "ones-agent": "disabled",
+                "p4rt": "enabled",
+                "pmon": "enabled",
+                "radv": "enabled",
+                "sflow": "enabled",
+                "snmp": "enabled",
+                "stp": "enabled",
+                "swss": "enabled",
+                "syncd": "enabled",
+                "teamd": "enabled",
+                "telemetry": "enabled"
+            },
+            "asic_services": {}
+        }
+    }
+}
