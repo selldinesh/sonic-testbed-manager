@@ -11,6 +11,7 @@ cp -f  $SCRIPT_DIR/base.py  /var/AzDevOps/sonic-mgmt/tests/common/devices/base.p
 cp -f  $SCRIPT_DIR/snappi_fixtures.py /var/AzDevOps/sonic-mgmt/tests/common/snappi_tests/snappi_fixtures.py
 cp -f  $SCRIPT_DIR/vms-snappi-sonic.json  /var/AzDevOps/sonic-mgmt/tests/metadata/vms-snappi-sonic.json
 cp -f  $SCRIPT_DIR/conftest.py /var/AzDevOps/sonic-mgmt/tests/conftest.py
+cp -f  $SCRIPT_DIR/variables.py /var/AzDevOps/sonic-mgmt/tests/snappi_tests/variables.py
 echo $SCRIPT_DIR
 if [ "$1" = "Novus" ] || [ "$1" = "novus" ]; then 
     echo "Novus"

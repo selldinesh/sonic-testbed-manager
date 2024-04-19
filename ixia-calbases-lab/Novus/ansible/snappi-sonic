@@ -19,4 +19,4 @@ sonic
 snappi_chassis
 
 [ptf]
-snappi-sonic-ptf     ansible_host='10.36.83.191'
+snappi-sonic-ptf     ansible_host='10.36.82.75'
